@@ -9,26 +9,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav>
-    <img src="logo.png" alt="Logo"/>
+  <header>
     <h1>NH Vote</h1>
-    <a href="learn.html">Learn</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <div id="header-right">
+      <a href="#about">About</a>
+      <a href="#learn">Learn</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
 
   <main>
-    <h2>There is a problem with NH Voting.</h2>
-    <p>Politics has grown increasingly polarized over the past few years in our country. Here in New Hampshire, many voters feel like they have lost their voice or never had one to begin with. This problem affects people of every demographic and crosses party lines. Whether you vote red, blue, purple, green, or anything in between - everybody just wants to be heard.</p>
-    <h2>What can be done?</h2>
-    <p>Awareness is the first step to change! We will guide you through a simple simulation where you will learn about the limitations of our current voting system and we will present a simple alternative that will benefit everyone.</p>
-    <img src="assets/elipses.jpg" alt="..."/>
-    <img src="assets/logo.png" alt="NH Guy"/>
-    <h2>Ready to begin?</h2>
-    <button onclick="window.location.href = 'learn.html'">Start</button>
+    <div id="about">
+      <img src="assets/logo.png" alt="Mascot"/>
+      <h1>NH Vote</h1>
+      <div id="about-main">
+        <h3>There is a problem with NH Voting.</h3>
+        <p>Politics has grown increasingly polarized over the past few years in our country. Here in New Hampshire, many voters feel like they have lost their voice or never had one to begin with. This problem affects people of every demographic and crosses party lines. Whether you vote red, blue, purple, green, or anything in between - everybody just wants to be heard.</p>
+        <h3>What can be done?</h3>
+        <p>Awareness is the first step to change! We will guide you through a simple simulation where you will learn about the limitations of our current voting system and we will present a simple alternative that will benefit everyone.</p>
+      </div>
+      <div id="about-bottom">
+        <img src="assets/logo.png" alt="NH Guy"/>
+        <div id="about-bottom-left">
+          <h3>Ready to begin?</h3>
+          <button onclick="window.location.href = '#learn'">Start</button>
+        </div>
+    </div>
+    <div id="learn">
+
+    </div>
+    <div id="contact">
+
+    </div>
   </main>
+
+  <footer>
+
+  </footer>
 
   <script src="js/app.js"></script>
 </body>
