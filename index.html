@@ -9,21 +9,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+
+  <script src="js/app.js"></script>
 </head>
 
 <body>
-  <header>
-    <div id="header-left">
-      <h1>NH Vote</h1>
-    </div>
-    <div id="header-right">
-      <a href="#about">About</a>
-      <a href="#learn">Learn</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </header>
 
+  
+
+  <div id="about">
+    <nav>
+      <h1><a href="#about">RANKED CHOICE NH</a></h1>
+      <div id="nav-links">
+        <a href="#simulation">Simulation</a>
+        <a href="#contact">Let My Voice Be Heard!</a>
+      </div>
+    </nav>
+
+    <div id="about-main">
+      <h2>THERE IS A PROBLEM WITH NH VOTING.</h2>
+      <p>Politics has grown increasingly polarized over the past few years in our country. Here in New Hampshire, many voters feel like they have lost their voice or never had one to begin with. This problem affects people of every demographic and crosses party lines. Whether you vote red, blue, purple, green, or anything in between - everybody just wants to be heard.</p>
+      <h2>WHAT CAN BE DONE?</h2>
+      <p>Awareness is the first step to change! We will guide you through a simple simulation where you will learn about the limitations of our current voting system and we will present a simple alternative that will benefit everyone.</p>
+
+      <button onclick="window.location.href = '#simulation'">⤋ Begin ⤋</button>
+    </div>
+  </div>
+
+  <div id="simulation">
+    <div id="content-window">
+      <img id="current-slide" src="assets/slides/slide0-state0.png"/>
+    </div>
+    <button onclick="nextSlide()">next.</button>
+  </div>
+
+  <div id="contact">
+
+  </div>
+
+  
+
+  <!--
   <main>
     <div id="about-main">
       <img src="assets/profile.png" alt="Mascot"/>
@@ -49,13 +76,8 @@
     <div id="contact">
 
     </div>
+  -->
   </main>
-
-  <footer>
-
-  </footer>
-
-  <script src="js/app.js"></script>
 </body>
 
 </html>
