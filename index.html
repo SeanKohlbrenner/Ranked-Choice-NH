@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>NH Voting</title>
+  <title>Ranked Choice NH</title>
   <meta name="author" content="Sean Kohlbrenner and Taylor Roy">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
 
-  <script src="js/app.js"></script>
+  
 </head>
 
 <body>
@@ -28,7 +28,7 @@
       <h2>THERE IS A PROBLEM WITH NH VOTING.</h2>
       <p>Politics has grown increasingly polarizing over the past few years in our country. Here in New Hampshire, many voters feel like they have lost their voice or never had one to begin with. This problem affects people of every demographic and crosses party lines. Whether you vote red, blue, or anything in between - we can all agree that we just want to be heard.</p>
       <h2>WHAT CAN BE DONE?</h2>
-      <p>Awareness is the first step to change! We will guide you through a simple simulation where you will learn about the limitations of our current voting system and we will present a simple alternative that will benefit everyone.</p>
+      <p>Awareness is the first step to change! We will guide you through a simple simulation where you will learn about the limitations of our current voting system (first pass the post/FPTP) and we will present a simple alternative that will benefit everyone.</p>
 
       <button onclick="window.location.href = '#simulation'">⤋ Begin ⤋</button>
     </div>
@@ -44,6 +44,19 @@
       </div>
       <button onclick="nextSlide()" id="simulation-button">Next</button>
     </div>
+  </div>
+
+  <div id="sandbox-select">
+    <h1>Sandbox:</h1>
+    <label for="candidates" id="candidates-label"># Candidates: 3</label>
+    <input id="candidates" type="range" name="candidates" min="2" max="10" defaultValue="3" value="3" data-sizing="px">
+    <label for="voters" id="voters-label"># Voters: 300</label>
+    <input id="voters" type="range" name="voters" min="3" max="300" value="300" defaultValue="300" data-sizing="px">
+    <p>This will use your responses and simulate some random possible voting results to show a comparison between FTFP and Ranked Choice</p>
+    <button onclick="window.location.href = '#map'">⤋ Go ⤋</button>
+  </div>
+  <div id="sandbox-demo">
+
   </div>
 
   <div id="map">
@@ -76,6 +89,8 @@
   </div>
 
   </main>
+
+  <script src="js/app.js"></script>
 </body>
 
 </html>

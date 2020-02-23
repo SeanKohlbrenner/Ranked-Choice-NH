@@ -16,6 +16,14 @@ let nextState = 0;
 let currentSlide = 0;
 let formPresent = 1;
 
+const candInput = document.getElementById("candidates");
+const voteInput = document.getElementById("voters");
+
+candInput.addEventListener('change', handle1Update);
+candInput.addEventListener('mousemove', handle1Update);
+voteInput.addEventListener('change', handle2Update);
+voteInput.addEventListener('mousemove', handle2Update);
+
 function nextSlide() {
   // Remove form if it exists
   if (formPresent) {
@@ -37,7 +45,7 @@ function nextSlide() {
   catch(err) {
     //let button = document.getElementById("simulation-button");
     //button.setAttribute("onclick", "window.location.href = '#contact'");
-    document.getElementById("map").scrollIntoView();
+    document.getElementById("sandbox-select").scrollIntoView();
     return;
   }
 
@@ -86,6 +94,18 @@ function addForm(type, radioValues) {
     document.getElementById("simulation-form").prepend(input); 
   }
 }
+
+
+
+function handle1Update() {
+  document.getElementById("candidates-label").textContent = "# Candidates: " + this.value;
+}
+
+function handle2Update() {
+  document.getElementById("voters-label").textContent = "# Voters: " + this.value;
+}
+
+    
 
 function sendEmail() {
   const emailButton = document.getElementById("email-button");

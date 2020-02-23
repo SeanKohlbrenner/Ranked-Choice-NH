@@ -109,6 +109,41 @@ html, body {
     font-size: 1em;
   }
 
+#sandbox-select {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+  #sandbox-select h1 {
+    font-size: 2.5em;
+    margin-bottom: 10vh;
+  }
+
+  #sandbox-select input {
+    width: 40%;
+    margin-bottom: 5vh;
+  }
+
+  #sandbox-select p {
+    font-size: 1.5em;
+    width: 40%;
+    margin: 10vh;
+    text-align: center;
+  }
+
+  #sandbox-select button {
+    width: 10%;
+    height: 5%;
+    border-radius: 50px;
+    font-size: 1em;
+    background-color: #000;
+    border: none;
+    color: white;
+  }
+
 #map {
   background-color: black;
   background-size: 100%;
@@ -227,13 +262,3 @@ html, body {
       border-radius: 5px;
       border: 1px solid black;
     }
-
-#to-top {
-  text-decoration: none;
-  text-align: center;
-  color: white;
-  display: none;
-  position: absolute;
-  left: 10%;
-  bottom: 50vh;
-}
