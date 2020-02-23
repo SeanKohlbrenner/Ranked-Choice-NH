@@ -8,7 +8,10 @@ const FORM_DATA = 3;
 const TYPE_TEXT = 1;
 const TYPE_RADIO = 2;
 
-const statistics = [1, 0, ["slide0-state1.png", "slide0-state2.png", "slide0-state3.png", "slide0-state4.png"], ["Tree", "Bird"]];
+const statistics = [2, 0, ["statistics/slide0-state1.png", "statistics/slide0-state2.png", "statistics/slide0-state3.png", "statistics/slide0-state4.png"], ["Tree", "Bird"]];
+const simulation = [0, 0, ["simulation/state0.png", "simulation/state1.png", "simulation/state2.png", "simulation/state3.png", "simulation/state4.png", "simulation/state5.png"], []]
+const slideshow = [statistics, simulation];
+
 let next = 0;
 let formPresent = 0;
 
@@ -17,14 +20,11 @@ function nextSlide() {
   if (formPresent) {
     const form = document.getElementById("simulation-form");
     const formChildren = form.childNodes;
-    console.log(formChildren);
     let i;
     for (i = 0; i < formChildren.length; i++) {
-      formChildren[i].remove();
+      formChildren[i].innerHTML = "";
     }
-
     form.innterHTML = "";
-    form.innerHTML = '';
     form.remove();
     formPresent = 0;
   }
@@ -54,12 +54,12 @@ function addForm(type, radioValues) {
       input.setAttribute("id", "simulation-form");
       input.setAttribute("type", "radio");
       input.setAttribute("id", "radio-button-" + i);
-      document.getElementById("simulation-input").prepend(input);
+      document.getElementById("simulation-form").prepend(input);
 
       let label = document.createElement("label");
       label.setAttribute("for", "radio-button-" + i);
       label.textContent = radioValues[i];
-      document.getElementById("simulation-input").prepend(label);
+      document.getElementById("simulation-form").prepend(label);
     }
     //document.getElementById("simulation-input").prepend(input); 
   }
@@ -67,6 +67,6 @@ function addForm(type, radioValues) {
     let input = document.createElement("input");
     input.setAttribute("id", "simulation-form-text");
     input.setAttribute("type", "text");
-    document.getElementById("simulation-input").prepend(input); 
+    document.getElementById("simulation-form").prepend(input); 
   }
 }
