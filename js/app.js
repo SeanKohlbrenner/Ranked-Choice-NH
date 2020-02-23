@@ -8,7 +8,7 @@ const FORM_DATA = 3;
 const TYPE_TEXT = 1;
 const TYPE_RADIO = 2;
 
-const statistics = [2, 0, ["statistics/state1.png", "statistics/state2.png", "statistics/state3.png"], ["Tree", "Bird"]];
+const statistics = [1, 0, ["statistics/state1.png", "statistics/state2.png", "statistics/state3.png"], ["Tree", "Bird"]];
 const simulation = [0, 0, ["simulation/state0.png", "simulation/state1.png", "simulation/state2.png", "simulation/state3.png", "simulation/state4.png", "simulation/state5.png"], []]
 const slideshow = [statistics, simulation];
 
@@ -80,4 +80,26 @@ function addForm(type, radioValues) {
     input.setAttribute("type", "text");
     document.getElementById("simulation-form").prepend(input); 
   }
+}
+
+function sendEmail() {
+  const confirmation = document.createElement("h4");
+  confirmation.textContent = "Message Sent!";
+  document.getElementById("contact").appendChild(confirmation);
+  setTimeout(function(){ confirmation.remove(); }, 3000);
+}
+
+function sendTweet() {
+  const message = document.getElementById("contact-message").value;
+  let url = "";
+  if (message) {
+    let tokens = message.split(" ");
+    url = tokens[0];
+    let i;
+    for (i = 1; i < tokens.length; i++) {
+      url += "%20" + tokens[i];
+    }
+  }
+  console.log(url);
+  window.open("https://twitter.com/intent/tweet?text=" + url, "_blank");
 }
