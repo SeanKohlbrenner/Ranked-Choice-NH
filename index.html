@@ -52,15 +52,21 @@
     <input id="candidates" type="range" name="candidates" min="2" max="10" defaultValue="3" value="3" data-sizing="px">
     <label for="voters" id="voters-label"># Voters: 300</label>
     <input id="voters" type="range" name="voters" min="3" max="300" value="300" defaultValue="300" data-sizing="px">
-    <p>This will use your responses and simulate some random possible voting results to show a comparison between FTFP and Ranked Choice</p>
-    <button onclick="window.location.href = '#map'">⤋ Go ⤋</button>
+    <p>This simulator will comare RCV and FPTP voting by taking your input and generating voting results. The individual votes will be randomized, so feel free to run the same scenario a couple times and see how the results can differ each time!</p>
+    <button onclick="window.location.href = '#sandbox-demo'">⤋ Go ⤋</button>
   </div>
   <div id="sandbox-demo">
-
+    <img id="demo-img" src="assets/slides/sandbox/sandbox1.png"/>
+    <div id="sandbox-buttons">
+      <button onclick="window.location.href='#sandbox-select'">⤊ Reset Values ⤊</button>
+      <button onclick="resetSandboxImage(document.getElementById('demo-img'))">⟲ Run Again ⟲</button>
+      <button onclick="window.location.href = '#map'">⤋ What Now? ⤋</button>
+    </div>
   </div>
 
   <div id="map">
-    <h1>So, are you ready to fill in the map?</h1>
+    <h1>Are you ready to fill in the rest of the map?</h1>
+    <p>Make NH the next state to join the others implementing RCV</p>
     <img src="assets/map.png"/>
     <button onclick="window.location.href = '#contact'">⤋ How? ⤋</button>
   </div>

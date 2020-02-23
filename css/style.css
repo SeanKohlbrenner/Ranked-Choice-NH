@@ -124,13 +124,13 @@ html, body {
 
   #sandbox-select input {
     width: 40%;
-    margin-bottom: 5vh;
+    margin-bottom: 7vh;
   }
 
   #sandbox-select p {
     font-size: 1.5em;
     width: 40%;
-    margin: 10vh;
+    margin-bottom: 10vh;
     text-align: center;
   }
 
@@ -143,6 +143,38 @@ html, body {
     border: none;
     color: white;
   }
+
+#sandbox-demo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+  #demo-img {
+    height: 85vh;
+    width: auto;
+  }
+
+  #sandbox-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+    #sandbox-buttons button {
+      width: 30vh;
+      height: 5vh;
+      border-radius: 50px;
+      font-size: 1em;
+      background-color: #000;
+      border: none;
+      color: white;
+
+      margin: 4%;
+    }
 
 #map {
   background-color: black;
@@ -160,8 +192,14 @@ html, body {
     font-size: 2em;
   }
 
+  #map p {
+    color: white;
+    font-size: .75em;
+    margin-top: -2vh;
+  }
+
   #map img {
-    height: 80vh;
+    height: 78vh;
     width: auto;
   }
 

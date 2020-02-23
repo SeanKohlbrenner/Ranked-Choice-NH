@@ -24,6 +24,8 @@ candInput.addEventListener('mousemove', handle1Update);
 voteInput.addEventListener('change', handle2Update);
 voteInput.addEventListener('mousemove', handle2Update);
 
+let sandboxImage = 1;
+
 function nextSlide() {
   // Remove form if it exists
   if (formPresent) {
@@ -95,8 +97,6 @@ function addForm(type, radioValues) {
   }
 }
 
-
-
 function handle1Update() {
   document.getElementById("candidates-label").textContent = "# Candidates: " + this.value;
 }
@@ -105,7 +105,17 @@ function handle2Update() {
   document.getElementById("voters-label").textContent = "# Voters: " + this.value;
 }
 
-    
+function resetSandboxImage(image) {
+  if (sandboxImage == 1) {
+    image.src = "assets/slides/sandbox/sandbox2.png"
+    sandboxImage = 2;
+  }
+  else {
+    image.src = "assets/slides/sandbox/sandbox1.png"
+    sandboxImage = 1;
+  }
+}
+
 
 function sendEmail() {
   const emailButton = document.getElementById("email-button");
