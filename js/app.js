@@ -120,6 +120,7 @@ function resetSandboxImage(image) {
 function sendEmail() {
   const emailButton = document.getElementById("email-button");
   emailButton.textContent = "Message Sent!";
+  document.getElementById("contact-message").value = "";
   setTimeout(function(){ emailButton.textContent = "Send Email"; }, 3000);
 }
 

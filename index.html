@@ -20,6 +20,8 @@
       <h1><a href="#about">RANKED CHOICE NH</a></h1>
       <div id="nav-links">
         <a href="#simulation">Simulation</a>
+        <a href="#sandbox-select">Sandbox</a>
+        <a href="#map">Join</a>
         <a href="#contact">Let My Voice Be Heard!</a>
       </div>
     </nav>
@@ -49,10 +51,10 @@
   <div id="sandbox-select">
     <h1>Sandbox:</h1>
     <label for="candidates" id="candidates-label"># Candidates: 3</label>
-    <input id="candidates" type="range" name="candidates" min="2" max="10" defaultValue="3" value="3" data-sizing="px">
+    <input id="candidates" type="range" name="candidates" min="2" max="10" defaultValue="0" value="0" data-sizing="px">
     <label for="voters" id="voters-label"># Voters: 300</label>
-    <input id="voters" type="range" name="voters" min="3" max="300" value="300" defaultValue="300" data-sizing="px">
-    <p>This simulator will comare RCV and FPTP voting by taking your input and generating voting results. The individual votes will be randomized, so feel free to run the same scenario a couple times and see how the results can differ each time!</p>
+    <input id="voters" type="range" name="voters" min="3" max="300" value="0" defaultValue="0" data-sizing="px">
+    <p>This simulator will compare RCV and FPTP voting by taking your input and generating voting results. The individual votes will be randomized, so feel free to run the same scenario a couple times and see how the results can differ each time!</p>
     <button onclick="window.location.href = '#sandbox-demo'">⤋ Go ⤋</button>
   </div>
   <div id="sandbox-demo">
@@ -78,7 +80,7 @@
       <img src="assets/hassan.jpg"/>
     </div>
     <div id="contact-names">
-      <h2>Jeane Shaheen</h2>
+      <h2>Jeanne Shaheen</h2>
       <h2>Maggie Hassan</h2>
     </div>
 
