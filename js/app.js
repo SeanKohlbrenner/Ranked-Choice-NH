@@ -8,13 +8,13 @@ const FORM_DATA = 3;
 const TYPE_TEXT = 1;
 const TYPE_RADIO = 2;
 
-const statistics = [1, 0, ["statistics/state1.png", "statistics/state2.png", "statistics/state3.png"], ["Tree", "Bird"]];
+const statistics = [0, 0, ["statistics/state1.png", "statistics/state2.png", "statistics/state3.png"], []];
 const simulation = [0, 0, ["simulation/state0.png", "simulation/state1.png", "simulation/state2.png", "simulation/state3.png", "simulation/state4.png", "simulation/state5.png"], []]
 const slideshow = [statistics, simulation];
 
 let nextState = 0;
 let currentSlide = 0;
-let formPresent = 0;
+let formPresent = 1;
 
 function nextSlide() {
   // Remove form if it exists
@@ -31,7 +31,15 @@ function nextSlide() {
   }
   
   // Show next image on slideshow
-  document.getElementById("current-slide").src = "assets/slides/" + slideshow[currentSlide][STATES][nextState];
+  try {
+    document.getElementById("current-slide").src = "assets/slides/" + slideshow[currentSlide][STATES][nextState];
+  }
+  catch(err) {
+    //let button = document.getElementById("simulation-button");
+    //button.setAttribute("onclick", "window.location.href = '#contact'");
+    document.getElementById("map").scrollIntoView();
+    return;
+  }
 
 
   // Place form on slideshow
@@ -46,10 +54,7 @@ function nextSlide() {
   if (nextState == slideshow[currentSlide][STATES].length) {
     currentSlide++;
     nextState = 0;
-    //console.log("HERE");
   }
-
-  console.log("nst: " + nextState + " " + "csl: " + currentSlide);
 }
 
 // type: 0 - text input  1 - radio
@@ -83,10 +88,9 @@ function addForm(type, radioValues) {
 }
 
 function sendEmail() {
-  const confirmation = document.createElement("h4");
-  confirmation.textContent = "Message Sent!";
-  document.getElementById("contact").appendChild(confirmation);
-  setTimeout(function(){ confirmation.remove(); }, 3000);
+  const emailButton = document.getElementById("email-button");
+  emailButton.textContent = "Message Sent!";
+  setTimeout(function(){ emailButton.textContent = "Send Email"; }, 3000);
 }
 
 function sendTweet() {
@@ -103,3 +107,4 @@ function sendTweet() {
   console.log(url);
   window.open("https://twitter.com/intent/tweet?text=" + url, "_blank");
 }
+

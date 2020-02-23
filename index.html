@@ -26,7 +26,7 @@
 
     <div id="about-main">
       <h2>THERE IS A PROBLEM WITH NH VOTING.</h2>
-      <p>Politics has grown increasingly polarized over the past few years in our country. Here in New Hampshire, many voters feel like they have lost their voice or never had one to begin with. This problem affects people of every demographic and crosses party lines. Whether you vote red, blue, purple, green, or anything in between - everybody just wants to be heard.</p>
+      <p>Politics has grown increasingly polarizing over the past few years in our country. Here in New Hampshire, many voters feel like they have lost their voice or never had one to begin with. This problem affects people of every demographic and crosses party lines. Whether you vote red, blue, or anything in between - we can all agree that we just want to be heard.</p>
       <h2>WHAT CAN BE DONE?</h2>
       <p>Awareness is the first step to change! We will guide you through a simple simulation where you will learn about the limitations of our current voting system and we will present a simple alternative that will benefit everyone.</p>
 
@@ -39,13 +39,21 @@
       <img id="current-slide" src="assets/slides/statistics/state0.png"/>
     </div>
     <div id="simulation-input">
-      
-      <button onclick="nextSlide()">Next</button>
+      <div id="simulation-form">
+        <input id="simulation-form-text" type="text">
+      </div>
+      <button onclick="nextSlide()" id="simulation-button">Next</button>
     </div>
   </div>
 
+  <div id="map">
+    <h1>So, are you ready to fill in the map?</h1>
+    <img src="assets/map.png"/>
+    <button onclick="window.location.href = '#contact'">⤋ How? ⤋</button>
+  </div>
+
   <div id="contact">
-    <h1>Be Heard.</h1>
+    <h1>BE HEARD</h1>
     <div id="contact-images">
       <img src="assets/shaheen.jpg"/>
       <img src="assets/hassan.jpg"/>
@@ -55,11 +63,15 @@
       <h2>Maggie Hassan</h2>
     </div>
 
-    <h3>Message:</h3>
-    <input id="contact-message" type="text"/>
-    <div id="contact-buttons">
-      <button onclick="sendEmail()">Send Email</button>
-      <button onclick="sendTweet()">Send Tweet</button>
+    <p>Contact your representative and let them know that they should push to reform the voting system by implementing ranked choice voting.</p>
+
+    <div id="message-content">
+      <h3>Message:</h3>
+      <input id="contact-message" type="text"/>
+      <div id="contact-buttons">
+        <button onclick="sendEmail()" id="email-button">Send Email</button>
+        <button onclick="sendTweet()">Send Tweet</button>
+      </div>
     </div>
   </div>
 

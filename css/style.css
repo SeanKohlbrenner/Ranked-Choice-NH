@@ -6,6 +6,8 @@ html, body {
   overflow: auto;
 
   font-family: "Lato";
+
+  scroll-behavior: smooth;
   }
   
 #about {
@@ -26,7 +28,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
 
-    background-color: linear-gradient(to top, #000);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 100%);
 
     width:100%;
   }
@@ -77,7 +79,7 @@ html, body {
       margin-top: 5vh;
       border-radius: 50px;
       font-size: 1.5em;
-      background-color: rgba(255,255,255,.95);
+      background-color: #fff;
       border: none;
     }
 
@@ -95,9 +97,143 @@ html, body {
     align-self:center;
   }
 
+  #simulation-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #simulation-input button {
+    border: none;
+    border-radius: 2px;
+    font-size: 1em;
+  }
+
+#map {
+  background-color: black;
+  background-size: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+  #map h1 {
+    color: white;
+    font-size: 2em;
+  }
+
+  #map img {
+    height: 80vh;
+    width: auto;
+  }
+
+  #map button {
+    border: none;
+    border-radius: 5px;
+    width: 10%;
+    height: 5%;
+  }
+
 #contact {
   background-image: url(../assets/background.jpg);
   background-size: 100%;
   
   height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  color: white;
+}
+
+  #contact h1 {
+    font-size: 3em;
+  }
+
+  #contact-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 25%;
+  }
+
+  #contact img {
+    height: 30vh;
+    width: auto;
+    border-radius: 10px;
+  }
+
+  #contact-names {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 25%;
+  }
+
+  #contact p {
+    font-size: 1.1em;
+    width: 40%;
+  }
+
+  #message-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 40%;
+  }
+
+    #message-content h3 {
+      font-size: 1.2em;
+    }
+
+    #contact-message {
+      height: 5vh;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 5vh;
+    }
+
+    #contact-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #contact-buttons button {
+      width: 49%;
+      height: 5vh;
+
+      background-color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #contact-buttons button:hover {
+      width: 49%;
+      height: 5vh;
+
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 5px;
+      border: 1px solid black;
+    }
+
+#to-top {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  display: none;
+  position: absolute;
+  left: 10%;
+  bottom: 50vh;
 }
