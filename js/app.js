@@ -135,7 +135,7 @@ function sendTweet() {
       url += "%20" + tokens[i];
     }
   }
-  console.log(url);
-  window.open("https://twitter.com/intent/tweet?text=" + url, "_blank");
+  document.getElementById("contact-message").value = "";
+  window.open("https://twitter.com/intent/tweet?text=@SenatorHassan%20@SenatorShaheen%20" + url, "_blank");
 }
 
