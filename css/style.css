@@ -105,8 +105,10 @@ html, body {
 
   #simulation-input button {
     border: none;
-    border-radius: 2px;
+    border-radius: 3px;
     font-size: 1em;
+    background-color: black;
+    color: white;
   }
 
 #sandbox-select {
